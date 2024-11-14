@@ -6,7 +6,7 @@ const Experiencia = () => {
         <section className="w-full flex flex-col justify-center items-center mt-32 pb-32">
           <div className="flex flex-col text-black w-full md:w-1/2 px-12 relative pb-1 border-l border-black">
           <span className="bg-black w-2 h-2 absolute top-0 left-[-4] rounded-full"></span>
-            <span className="bg-black w-2 h-2 absolute  top-24 left-[-4] rounded-full"></span>
+            <span className="bg-black w-2 h-2 absolute  top-24 left-[-4px] rounded-full"></span>
             <h2 className="text-2xl font-bold mb-12">🧳 Experiencia</h2>
             <span className="text-xl mb-2 font-bold">
               Sr Front-end developer
@@ -28,7 +28,7 @@ const Experiencia = () => {
             </div>
           </div>
           <div className="flex flex-col text-black w-full md:w-1/2 px-12 relative pt-16 border-l border-black">
-          <span className="bg-black w-2 h-2 absolute top-20 left-[-4] rounded-full"></span>
+          <span className="bg-black w-2 h-2 absolute top-20 left-[-4px] rounded-full"></span>
             <span className="text-xl mb-2 font-bold">
               Front-end developer
             </span>
@@ -44,7 +44,7 @@ const Experiencia = () => {
             
           </div>
           <div className="flex flex-col text-black w-full md:w-1/2 px-12 relative pt-12 border-l border-black">
-          <span className="bg-black w-2 h-2 absolute top-16 left-[-4] rounded-full"></span>
+          <span className="bg-black w-2 h-2 absolute top-16 left-[-4px] rounded-full"></span>
             <span className="text-xl mb-2 font-bold">
               Desarrollador Web
             </span>
@@ -60,7 +60,7 @@ const Experiencia = () => {
             </div>
           </div>
           <div className="flex flex-col text-black w-full md:w-1/2 px-12 relative pt-12 border-l border-black">
-          <span className="bg-black w-2 h-2 absolute top-16 left-[-4] rounded-full"></span>
+          <span className="bg-black w-2 h-2 absolute top-16 left-[-4px] rounded-full"></span>
             <span className="text-xl mb-2 font-bold">
               Analista de Finanzas 
             </span>
@@ -74,7 +74,7 @@ const Experiencia = () => {
             </div>
           </div>
           <div className="flex flex-col text-black w-full md:w-1/2 px-12 relative pt-12 border-l border-black">
-          <span className="bg-black w-2 h-2 absolute top-16 left-[-4] rounded-full"></span>
+          <span className="bg-black w-2 h-2 absolute top-16 left-[-4px] rounded-full"></span>
             <span className="text-xl mb-2 font-bold">
               Analista de Tesorería
             </span>
@@ -88,7 +88,7 @@ const Experiencia = () => {
             </div>
           </div>
           <div className="flex flex-col text-black w-full md:w-1/2 px-12 relative pt-12 border-l border-black">
-          <span className="bg-black w-2 h-2 absolute top-16 left-[-4] rounded-full"></span>
+          <span className="bg-black w-2 h-2 absolute top-16 left-[-4px] rounded-full"></span>
             <span className="text-xl mb-2 font-semibold">
               Analista de Tesorería
             </span>
@@ -102,7 +102,7 @@ const Experiencia = () => {
 
           </div>
           <div className="flex flex-col text-black w-full md:w-1/2 px-12 relative pt-12 border-l border-black">
-          <span className="bg-black w-2 h-2 absolute top-16 left-[-4] rounded-full"></span>
+          <span className="bg-black w-2 h-2 absolute top-16 left-[-4px] rounded-full"></span>
             <span className="text-xl mb-2 font-semibold">
               Analista de Cuentas a pagar
             </span>
@@ -116,7 +116,7 @@ const Experiencia = () => {
             </div>
           </div>
           <div className="flex flex-col text-black w-full md:w-1/2 px-12 relative pt-12 border-l border-black">
-          <span className="bg-black w-2 h-2 absolute top-16 left-[-4] rounded-full"></span>
+          <span className="bg-black w-2 h-2 absolute top-16 left-[-4px] rounded-full"></span>
             <span className="text-xl mb-2 font-semibold">
               Administrativo
             </span>
@@ -127,7 +127,7 @@ const Experiencia = () => {
                 pedidos de clientes. Control de stock de productos en sistema.
               </p>
             </div>
-            <span className="bg-black w-2 h-2 absolute bottom-0 left-[-4] rounded-full"></span>
+            <span className="bg-black w-2 h-2 absolute bottom-0 left-[-4px] rounded-full"></span>
           </div>
         </section>
     </div>

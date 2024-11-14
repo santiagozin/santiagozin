@@ -5,7 +5,7 @@ const Experiencia = () => {
     <div>
         <section className="w-full flex flex-col justify-center items-center mt-32 pb-32">
           <div className="flex flex-col text-black w-full md:w-1/2 px-12 relative pb-1 border-l border-black">
-          <span className="bg-black w-2 h-2 absolute top-0 left-[-4] rounded-full"></span>
+          <span className="bg-black w-2 h-2 absolute top-0 left-[-4px] rounded-full"></span>
             <span className="bg-black w-2 h-2 absolute  top-24 left-[-4px] rounded-full"></span>
             <h2 className="text-2xl font-bold mb-12">🧳 Experiencia</h2>
             <span className="text-xl mb-2 font-bold">

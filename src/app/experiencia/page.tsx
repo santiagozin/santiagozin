@@ -32,7 +32,7 @@ const Experiencia = () => {
             <span className="text-xl mb-2 font-bold">
               Front-end developer
             </span>
-            <span className="text-lg italic font-semibold">Nosis - Nov 2020 / Jun 2023</span>
+            <span className="text-lg italic font-semibold">IT Desarrollos (Nosis) - Nov 2019 / Jun 2023</span>
             <div className="pt-6">
               <p className="text-lg font-medium">
                 Desarrollo front-end en diversos proyectos relacionados con
@@ -64,7 +64,7 @@ const Experiencia = () => {
             <span className="text-xl mb-2 font-bold">
               Analista de Finanzas 
             </span>
-            <span className="text-lg italic font-semibold">- Galeno Seguros - Jul 2017 / Nov 2020</span>
+            <span className="text-lg italic font-semibold">- Galeno Seguros - Jul 2017 / Nov 2019</span>
             <div className="pt-6">
               <p className="text-lg font-medium">
               Análisis y control de cashflow. Análisis y emision de pagos a

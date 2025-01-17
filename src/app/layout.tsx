@@ -25,6 +25,7 @@ export default function RootLayout({
       <body
         className={`${jura.className} antialiased`}
       >
+        <Analytics />
         <Navbar />
         {children}
       </body>

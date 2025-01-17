@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Jura } from 'next/font/google'
 import Navbar from "./navbar";
+import { Analytics } from "@vercel/analytics/react"
 
 const jura = Jura({
     weight: ['400'],

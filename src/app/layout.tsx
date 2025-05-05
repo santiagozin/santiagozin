@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Jura } from 'next/font/google'
-import Navbar from "./navbar";
-import { Analytics } from "@vercel/analytics/react"
+import { Inter } from 'next/font/google'
 
-const jura = Jura({
-    weight: ['400'],
-    style: ['normal'],
-    subsets: ['latin'], 
-  })
+
+const inter = Inter({
+    subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
   title: "Santiago Zin",
@@ -23,10 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jura.className} antialiased`}
+        className={`${inter.className} antialiased`}
       >
-        <Analytics />
-        <Navbar />
+  
         {children}
       </body>
     </html>

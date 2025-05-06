@@ -2,7 +2,6 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion, MotionProps, Variants } from "framer-motion";
-import { ElementType } from "react";
 
 type AnimationType = "text" | "word" | "character" | "line";
 type AnimationVariant =
@@ -42,10 +41,6 @@ interface TextAnimateProps extends MotionProps {
    * Custom motion variants for the animation
    */
   variants?: Variants;
-  /**
-   * The element type to render
-   */
-  as?: ElementType;
   /**
    * How to split the text ("text", "word", "character")
    */
@@ -304,15 +299,12 @@ export function TextAnimate({
   variants,
   className,
   segmentClassName,
-  as: Component = "p",
   startOnView = true,
   once = false,
   by = "word",
   animation = "fadeIn",
   ...props
 }: TextAnimateProps) {
-  const MotionComponent = motion.create(Component);
-
   let segments: string[] = [];
   switch (by) {
     case "word":
@@ -377,7 +369,7 @@ export function TextAnimate({
 
   return (
     <AnimatePresence mode="popLayout">
-      <MotionComponent
+      <motion.div
         variants={finalVariants.container as Variants}
         initial="hidden"
         whileInView={startOnView ? "show" : undefined}
@@ -401,7 +393,7 @@ export function TextAnimate({
             {segment}
           </motion.span>
         ))}
-      </MotionComponent>
+      </motion.div>
     </AnimatePresence>
   );
 }

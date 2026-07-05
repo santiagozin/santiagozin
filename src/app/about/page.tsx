@@ -1,84 +1,97 @@
-"use client";
-import { BlurFade } from "@/components/magicui/blur-fade";
-import { Button } from "@/components/ui/button";
-import { Linkedin, Github, Mail } from "lucide-react";
 import Image from "next/image";
-import Navbar from "../navbar";
+import SiteHeader from "@/components/brutal/site-header";
+import SiteFooter from "@/components/brutal/site-footer";
+
+const socialLinks = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/santiago-zin-7a1bb977",
+  },
+  { label: "GitHub", href: "https://github.com/santiagozin" },
+  { label: "Email", href: "mailto:santiagozin90@gmail.com" },
+];
 
 export default function About() {
   return (
-    <main className="flex h-screen flex-col px-4 py-8">
-      <div className="flex items-center justify-between mb-auto px-40">
-        <div className="flex gap-4">
-          <Button
-            variant="default"
-            className="!p-0 [&>svg]:!w-7 [&>svg]:!h-7 mx-2"
-            onClick={() =>
-              window.open(
-                "https://www.linkedin.com/in/santiago-zin-7a1bb977",
-                "_blank"
-              )
-            }
-          >
-            <Linkedin />
-          </Button>
-          <Button
-            variant="default"
-            className="!p-0 [&>svg]:!w-7 [&>svg]:!h-7 mx-2"
-            onClick={() =>
-              window.open("https://github.com/santiagozin", "_blank")
-            }
-          >
-            <Github />
-          </Button>
-          <Button
-            variant="default"
-            className="!p-0 [&>svg]:!w-7 [&>svg]:!h-7 mx-2"
-            onClick={() =>
-              window.open("mailto:santiagozin90@gmail.com", "_blank")
-            }
-          >
-            <Mail />
-          </Button>
-        </div>
-        <Navbar />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-full overflow-hidden px-40 mt-10">
-        <div className="flex justify-center ">
-          <div className="relative bg-gray-900 rounded-full flex w-96 h-96 justify-center overflow-hidden">
-            <BlurFade delay={0.25} inView>
-              <Image
-                src="/yo2.png"
-                alt="Santiago Zin"
-                width={500}
-                height={500}
-                className="rounded-3xl relative z-10 opacity-90"
-              />
-            </BlurFade>
+    <>
+      <SiteHeader />
+
+      <section className="grid border-b-[3px] border-ink md:grid-cols-12">
+        {/* Photo */}
+        <div className="border-b-[3px] border-ink bg-paper-alt p-8 md:col-span-5 md:border-b-0 md:border-r-[3px] md:p-12">
+          <div className="brutal-border relative mx-auto aspect-[4/5] max-w-sm overflow-hidden">
+            <Image
+              src="/foto-personal.png"
+              alt="Santiago Zin"
+              fill
+              className="object-cover object-top grayscale"
+              priority
+            />
           </div>
         </div>
-        <div className="flex flex-col pt-10 text-white space-y-4 text-xl">
-          <p className=" font-medium">
-            ¡Hola! Soy Santiago Zin, un desarrollador de software apasionado por crear experiencias digitales excepcionales.
+
+        {/* Bio */}
+        <div className="p-8 md:col-span-7 md:p-12">
+          <p className="font-mono text-xs uppercase tracking-[0.14em] text-ink-muted">
+            Sobre mí
           </p>
-          
-          <p>
-            Mi enfoque combina desarrollo web y diseño para crear soluciones tecnológicas que no solo son visualmente atractivas, sino también intuitivas y eficientes. Me especializo en mejorar la experiencia del usuario y resolver problemas complejos a través de la tecnología.
+          <h1 className="font-display mt-4 text-5xl leading-[0.95] md:text-6xl">
+            Desarrollador Fullstack
+          </h1>
+          <div className="my-8 h-[3px] w-16 bg-ink" />
+
+          <p className="font-display text-2xl leading-snug md:text-3xl">
+            Creando productos
           </p>
 
-          <p>
-            Mi formación incluye estudios en diseño multimedial en la Escuela DaVinci, complementados con cursos de desarrollo Fullstack en instituciones reconocidas como MindHub, UTN Argentina y Coderhouse.
-          </p>
+          <div className="mt-10 space-y-5 font-ui text-lg leading-relaxed text-ink">
+            <p>
+              Soy Santiago Zin, desarrollador de software apasionado por crear
+              experiencias digitales excepcionales.
+            </p>
+            <p>
+              Mi enfoque combina desarrollo web y diseño para crear soluciones
+              tecnológicas que no solo son visualmente atractivas, sino también
+              intuitivas y eficientes.
+            </p>
+            <p>
+              Mi formación incluye diseño multimedial en la Escuela DaVinci,
+              complementada con cursos Fullstack en MindHub, UTN Argentina y
+              Coderhouse.
+            </p>
+            <p>
+              He trabajado principalmente en el sector financiero y bancario.
+              Actualmente me encuentro utilizando herramientas de IA para crear productos digitales.
+            </p>
+            <p>
+              Cuando no estoy programando, disfruto del tenis, el fútbol y
+              viajar. Vivo en Coghlan, Buenos Aires.
+            </p>
+          </div>
 
-          <p>
-            A lo largo de mi carrera, he trabajado principalmente en el sector financiero y bancario. Actualmente, me encuentro inmerso en el mundo Web3, desarrollando productos innovadores en blockchains como Base y OP Sepolia.
-          </p>
+          <div className="mt-12 border-l-[3px] border-signal pl-6">
+            <p className="font-display text-xl italic md:text-2xl">
+              Coghlan, Buenos Aires
+            </p>
+          </div>
 
-          <p>
-            Cuando no estoy programando, disfruto jugando al tenis y al fútbol, y me encanta viajar. Vivo en el barrio de Coghlan, en la ciudad de Buenos Aires.
-          </p>
+          <div className="mt-10 flex flex-wrap gap-6">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.label !== "Email" ? "_blank" : undefined}
+                rel={link.label !== "Email" ? "noopener noreferrer" : undefined}
+                className="font-mono text-sm uppercase tracking-[0.1em] underline decoration-[3px] underline-offset-4 transition-colors duration-100 hover:text-signal"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
-    </main>
+      </section>
+
+      <SiteFooter />
+    </>
   );
 }
